@@ -1,0 +1,13 @@
+<h1>Welcome <%= username %></h1>
+
+<h2>Here are your contacts</h2>
+<ul>
+  <li>
+    <% @contact_database.all do |contact|%>
+    <%= contact[:username] if contact%>
+    <%= contact[:email] %>
+        <%end%>
+  </li>
+</ul>
+
+<a href="/logout">Logout</a>
